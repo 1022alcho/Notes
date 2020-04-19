@@ -4,7 +4,7 @@ https://www.youtube.com/channel/UCJQJ4GjTiq5lmn8czf8oo0Q/videos
 - [What is Servers]($what-is-servers)
 - [Hub Switch Router](#hub-switch-router)
 - [What is Gateway](#what-is-gateway)
-- [Communicating with Probs](#communicating-with-probs)
+- [What is Proxy Server](#what-is-proxy-server)
 - [Structuring Apps with Class-Based Components](#structuring-apps-with-class-based-components)
 - [State in React Component](#state-in-react-component)
 
@@ -138,4 +138,28 @@ https://www.youtube.com/channel/UCJQJ4GjTiq5lmn8czf8oo0Q/videos
     - It also acts as a "gate" between two networks. It may be a router, firewall, server, or other device that enables traffic to flow in and out of the network.
     
 
-    
+# What is Proxy Server
+    - A Proxy Server is a server which retrieves the data out on the internet such as a web page on behalf of user. 
+    - When you are requesting for a website, the proxy server receives the request from your computer, then the proxy server will directly retrieve that webpage on your behalf and send to your computer.
+    Features:
+    - It allows you to surf the internet anonymously (hides your IP address).
+        - Without using a proxy, your public IP address is visible.
+            - Other people can know which web site you are viweing.
+        - As the proxy server is retrieving the web page for you, only the IP address of the proxy server can be seen viewing the web page.
+        - Your Computer -[Your IP Address]-> Proxy Server -[Proxy Server IP Address & Visible]-> Internet
+    - Speed
+        - When a user requests a web page, the proxy will cache the web page after delieverying it to the user.
+        - When a different user requests a same web page, the proxy will retrieve the web page from the proxy database (cache) and send it to the user without going out to the internet
+    - Saves bandwidth
+        - Since it has the cache mechanism, it reduces the needs to go out to the internet to retrieve data because it already has that data in the database
+    - Activity logging
+        - Organizations uses proxy to keep track of what websites their employees visit.
+        - The proxy will create a record of what web site users have visited, and how long they were on that website.
+        - In addition, Organizations can also configure the proxy to block certain web sites to keep their employees from visiting them.
+    Downside:
+    - It cannot encrypt data
+        - The data can be intercepted by hackers, government, ISP (Internet Service Provider)
+    - This is where ***VPN*** Virtual Private Network comes in
+        - Hides your IP address
+        - Encrypts the data that's being transferred over the internet
+        - Provides a dedicated secure tunnel between 2 points over the internet
