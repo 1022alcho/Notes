@@ -1,3 +1,5 @@
+https://www.youtube.com/channel/UCJQJ4GjTiq5lmn8czf8oo0Q/videos
+
 # Sections
 - [What is Servers]($what-is-servers)
 - [Hub Switch Router](#hub-switch-router)
@@ -18,7 +20,7 @@
         - Any machine can be set up as a server (file server, web server)
 
 ### Difference between Desktop vs Server machines
-    - CPU
+    CPU
         - Desktop:
             - Intel Core i7
         - Server:
@@ -26,13 +28,13 @@
                 - support larger amounts of RAM
                 - Larger cache memory
                 - HIgher core count
-    - Motherboard
+    Motherboard
         - Desktop:
             - Supports only a single processor
         - Server:
             - Supporst multiple processors (CPU)
             - Design to work with multiple processors
-    - Memory
+    Memory
         - Desktop:
             - Intel Core CPUs do not support ECC RAM
             - AMD CPUs do support ECC RAM
@@ -45,7 +47,7 @@
             - This is necessary for the Server machine because 
                 - Server machine should be running 24/7
                 - Memory error can bring down the server 
-    - Hard Drive
+    Hard Drive
         - Desktop
             - 
         - Server:
@@ -53,7 +55,7 @@
                 - RAID copies data on multiple disks
                 - If a hard drive were to be failed, it can be removed and replaced without shutting down the server
                 - The RAID will rebuild the data on a new hard drive automatically 
-    - Power Supply
+    Power Supply
         - Desktop
             - 
         - Server
@@ -71,7 +73,7 @@
                 - Able to handle thousands of concurrent connections
 
 ### Example of Servers with type of services
-     Web Server
+    Web Server
      - It is a server which hosts a web-site
      - Any website that you go to with the web-browser, you are connecting over the internet to that web server to pull up the website you want
      - Web server will contain all of the web-sites data including HTML code and graphics
