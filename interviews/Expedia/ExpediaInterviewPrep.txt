@@ -1,0 +1,243 @@
+Expedia Software Engineer Interview
+
+Behavioral Questions
+
+Hi, my name is Allen. 
+I am currently a senior and second year in Ischool. 
+I am looking for a position that will allow me to use my 
+development skills. Over the past few years, I’ve been
+strengthening these skills through several projects and
+internship experience. I enjoy developing various kinds of 
+applications for simple business solutions to common problems.
+ The position your company has listed in the website seems like 
+ it would be a perfect fit for someone with my skills. 
+
+
+1.Where do you see yourself in 5 years?
+    -Well, I am really excited by this position at Expedia because in five years, 
+    I'd like to be seen as someone with deep expertise in the energy sector,
+    and I know that's something that I'll have an opportunity to do here. I',
+    also really excited to take on more managerial responsibilities in the next
+    few years and potentially even take the lead on some projects. I've been lucky 
+    enough to work with some amazing managers, and so developing into a great manager 
+    myself is something I'm really excited about. In order to do that, I need to start
+    from the base and stack up my skills and become someone who has enough skills to
+    give proper advices to whoever needs help. 
+
+2. Why should we hire you?
+    participate in all phases of the software development lifecycle
+    -I think that my passion for technology and my ability to maintain websites, in
+    particular, would be a great fit for this position. Actually, in my last job was
+    responsibile for re-creating and designing employee use only website, and I learned
+    how to code in Python and its library in my spare time, so I was able to revamp that 
+    webpage and I got positive feedback from my department head. I think that my passion 
+    for technology and my coding skills would really be a great fit for this role.
+
+3. What are your strengths and weaknesses
+    -This could be my weakness but strengths at the same time. It is that my coding speed 
+    is not super fast. When I code, I try to make sure if even small updates are working,
+    so that I sometimes unnecessarily do many debuggings. But I do think that the first 
+    priority is if the program is functional, if it does the job fine. I think my self as
+    a slow but meticulous person who can get the job done.  
+
+4. What do you know about the company
+    -Expedia is the world's travel platfrom company which bridge the world and let people
+    dive into new cultures.
+
+5. What is your proud or accomplishment
+    -I will say my leadership 
+
+
+When I started sophomore year, I came to see that many of my peers, along with myself,
+preferred off-campus housing. But as with such things, many students struggled to find a
+harmonious balance with their roommates and quarrels often became a negative impact. Wanting
+to find a unique solution to a common problem, I decided to create a mobile application that
+could manage the financial aspects and communication among roommates. Realizing that I could
+not easily do this venture by myself, I participated in a program called KITS (Korean
+Information Technology Society) and created a team. Since I was in a primary role as the UX/UI
+
+Designer and in a secondary role as Project Manager, I was able to learn valuable lessons about
+the significance of leadership and proper decision-making. As a Project Manager, I played a
+leadership role and proactively explored the team members’ various strengths and weaknesses to
+efficiently and effectively distribute tasks. At the core center of all this was communication. I
+strongly believe that our team was successful because we were able to establish a positive vibe
+and perspective by respecting the obligations and accomplishments of each other. I learned that
+as a leader, I would have to maintain a proper balance of encouragement and constructive
+criticism in the face of any obstacles that we faced. Responsibility was the most thrilling part to
+me throughout the project. I had to be prepared to quickly respond to unexpected problems and
+manage others’ work responsibilities. But I made sure to often ask help from mentors to learn
+how to efficiently lead the group and produce the best results for everyone involved. This
+
+experience of collaboration was refreshingly new and the values of leadership and innovation
+that I carried throughout established a strong foundation for my future projects and work.
+
+
+Technical Questions
+
+1. Reverse a string
+    -walking through the string backwards and adding s.charAt(i) to a new string
+    -using two char arrays
+    -swapping within a single char array.
+    
+    ```Java
+        public static void ReverseString(String str) { 
+            char[] temp = str.toCharArray();
+            int left, right=0;
+            right = temp.length - 1;
+
+            for(left = 0; left < right; left++, right--)
+            {
+                char t = temp[left];
+                temp[left] = temp[right];
+                temp[right] = t;
+            }
+            for(char c : temp) { 
+                System.out.print(c);
+            }
+        }
+ }    ```
+
+2. Fibonacci Algorithm
+    ```Java
+        public int Fibonacci(int n) { 
+            if(n <= 1) { 
+                return n;
+            }    
+            return Fibonacci(n - 2) + Fibonacci(n - 1);
+        }
+    ```
+3. Cache
+    -It is hardware or software that is used to store something, usually data, 
+    temporarily in a computing(any activity that uses computers) environment.
+    -A small amount of faster, more expensive memory is used to improve the 
+    performance of recently accessed of frequently accessed data that is stored
+    temporarily in a rapidly accessible storage media that's local to the cache 
+    client and separate from bulk storage.
+    -Terms
+        -Cache hit
+            -data found in cache when requested
+        -Cache miss
+            -data not found in cache when requested
+        -Cache hit rate or ratio
+            -the percent of attempts that result in cache hits  
+        -Read Cache
+            -The browser can read data from the browser cache much faster than it
+            can reread the files from the webpage
+    -Importance
+        -The use of cache reduces latency for active data. This results in higher
+         performance for a system or application.
+    -Cache algorithms
+        -Least Frequently used  : keeps track of how often an entry is accessed.
+        -Least Recently Used    : puts recently accessed items near the top
+        -Most Recently Used     : removes the most recently accessed items first.
+    -Cache policies
+        -Write around cache
+            -writes operations to storage, skipping the cache altogether.
+            -Advantages
+                -This prevents the cache from being flooded when there are large amounts
+                 of write I/O
+            -Disadvantages
+                -The data isn't cached unless it's read from storage. 
+                -The read operation will be relatively slow (data hasn't been cached).
+        -Write through cache  
+            -writes data to cache and storage.
+            -Advantages
+                -Because newly written data is always cached, it can be read quickly. 
+            -Disadvantages
+                -Write operations aren't considered complete until the data is written 
+                 to both the cache and primary storage. 
+                -It can cause write through caching to introduce latency into write operations.
+        -Write back cache   
+            -All the write operations are directed to the cache. However, the write operation
+             is considered complete after the data is cached. Later on the data is copied from 
+             the cache to storage.
+            -Advantages
+                -Read and Write operations have low latency. 
+            -Disadvantages
+                -Depending on what caching mechanism is used, the data remains vulnerable to loss
+                until it's committed to storage. 
+
+4. Reverse a linked list
+    ```Java
+        public LinkedList Reverse(LinkedList root) { 
+            Node ptr = root;
+            Node temp = null;
+            Node prev = null;
+            while (ptr != null) {
+                temp = ptr.next;
+                ptr.next = prev;
+                prev = ptr;
+                ptr = temp;
+            }
+            ptr = prev;
+        }
+    ```
+5. 
+6. How to find the lowest common ancestor of two nodes in best  
+    ```Java
+        public Node LCA(Node node, int n1, int n2) { 
+            if(node == null) {  
+                return null;
+            }
+            if(node.data > n1 && node.data > n2) {
+                return LCA(node.left, n1, n2);
+            }
+            if(node.data < n1 && node.data < n2) {
+                return LCA(node.right, n1, n2);
+            }
+            return node.
+        }
+    ```
+7. Find the intersection of two array of integers
+    ```Java 
+        public static int[] intersectionOfTwoArray(int[] a, int[] b) {
+
+        }
+    ```
+8. Shuffle an array
+
+9. Pros and Cons of multiple inheritance
+10. Remove Duplicates from strings
+    ```Java 
+        public static String removeDuplicates(String str) { 
+            Set<Character> set = new HashSet<Character>();
+            StringBuilder sb = new StringBuilder();
+            for(int i = 0; i < str.length(); i++) { 
+                if(!set.contains(str.charAt(i))) {
+                    sb.append(str.charAt(i));
+                    set.add(str.charAt(i));
+                }
+            }
+            return sb.toString();
+        }
+    ```
+11. Stacks and Queues implementation
+12. Implement Poker
+13. DFS & BFS 
+14. TCP & UDP
+15. Remove Duplicates from array
+    ```Java
+        public static int[] removeDuplicates(int[] nums) { 
+            
+        }
+    ```
+16. Stack & Heap
+17. How can you find the common element of two linked list
+18. Find the longest contigious sequence with given  (5,4) (6,2) (9,3) (2,5) (4,9)
+19. Reverse the order of the words in a string
+20. Hashmaps and how to prevent collisions
+21. Figure out if a word was a palindrome or not
+22. Four pillars of OOP
+    -Encapsulation
+    -Abstraction
+    -Inheritance
+    -Polymorphism
+23. Strong typing vs weak typing
+    -Strong typing: types are strict and are not use-able for another
+    -Weak typing: types are use-able with other types (pointers in C)
+24. Difference between Hashtable and Hashmap
+25. Verify a string with number uppercase and lowercase
+26. Selection sort and merge sort, complexity in average case and best case
+27. Given an array of integers, return indices of the two numbers such that they add up to a specific number.  
+28. String manipulation  
+29.

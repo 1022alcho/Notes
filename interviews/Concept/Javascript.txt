@@ -1,0 +1,25 @@
+'use strict'
+    -The "use strict" directive switches the engine to the 
+    “modern” mode, changing the behavior of some built-in 
+    features. We’ll see the details later in the tutorial.
+
+let, var, const
+    -let 
+        -Creating a variable (named storage for data).
+    -var instead of let 
+        -Var is in a slightly different, 'old-school' way
+    -const  
+        -const is like let but the value of the variable can't be changed
+
+String
+    Double quotes and Single quotes 
+        -"Hello" & 'Hello' are same in Javascript
+    Backticks
+        -`Hello` allows to embed variables and expressions into a string by
+        wrapping them in ${...}
+        -Ex:
+        ```Javascript
+            let name = "John"
+            alert(`Hello, ${name}`); //Hello, John 
+        ```
+        

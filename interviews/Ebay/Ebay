@@ -1,0 +1,153 @@
+Ebay 
+    Questions Type:
+        -Algorithms
+        -Data-structures and design
+        -Basics of OOP design
+
+1. Implement a function that would accept two strings and check if one string is an anagram of the other.
+
+2. Given an array(list) of integers, write a function that would determine if the elements in the array can be divided into two parts each giving the same sum.
+
+3. Email address drop-down application. For example, when we type email address while composing an email, we get a drop down of suggested email address options starting with same letter(s). Write code to do this. (This was basically the implementation of trie data structure). 
+
+4. what's the difference between stack and heap in memory.
+-Main difference between stack and heap is that, stack is used to store local variables and function calls whereas heap is used to store the objects. Objects no matter where they are created are stored in the heap. Each thread has its own private stack where it stores its variables whereas each thread shares the heap. Heap memory is much larger than stack. Exceeding heap memory causes JVM to throw OutOfMemoryError. Exceeding stack memory causes JVM to throw StackOverFlowError. Recursive calls are generally stack intensive, they use up stack pretty soon.
+
+5. If I mark an arraylist as final, can i add more elements to  it?
+-Yes , You can add to Arralylist because marking final means you are creating final variable which can't hold any other object ref except the defined Arralylist .
+
+6. Design a cache system
+Design a cache system:
+
+``` Java
+    struct table {
+        int key;
+        string value;
+        rank;
+    };
+
+    table cache[5];
+    int size = 100;
+    table[size] lookup1,
+
+    int main () {
+        get(5);
+        get(90);
+        get(15);
+    }
+
+    int get(int key) {
+        int return_value = 0;
+        int flag = 0;
+        for (int i = 0; i cache[i]) {
+                    swap(cache[i], cache[j]);
+                }
+            }
+        }
+    }
+```
+
+7. nothing unexpected, basic concepts about RESTful web  service, data structure (hashtable and collision), algorithm and some coding challenges (tree, searching, array...)
+8. Fibonacci numbers 1 1 2 3 5 8 13 ... 2. two sum, do not  need to deal with duplicate pairs
+9. Given a BS tree, give the median number in the tree with  O(1) space.
+    private static void median(Node root2) {
+        if(root2 == null)
+            return;
+
+        if(root2.left != null) {
+            median(root2.left);
+            count--;
+        }
+
+        if(count==0) {
+            System.out.println(root2.data);
+            return;
+        }
+
+        if(root2.right != null) {
+            median(root2.right);
+            count--;
+        }
+    }
+
+10. Reverse a Linked List Algo for Binary tree Lowest Common  Ancestor
+    public static Node recursive(Node head){
+        if(head==null)
+            return null;
+        if(head.next==null)
+            return head;
+        Node second = head.next;
+        head.next=null;
+        Node reverse=recursive(second);
+        second.next=head;
+        return reverse;
+    }
+
+11. Detect if a linked list has a loop.
+    Keep two pointers at the head.
+    Advance one pointer by single node, and another by two nodes.
+    If they meet at some point of time, then it has a loop.
+    _______
+    If you want to find the starting point of loop:
+    &gt; When both pointers meet, set one of them to head again.
+    &gt;Move both by single node until they meet again. This will be the start of the loop.
+
+12. What is race condition?
+    Race condition in software is a concurrency flaw that occurs when 2+ threads (or processes) 
+    access non-mutual exclusive shared data - like a global variable - and the result of the 
+    system is unpredictable, like reading or writing the wrong value.
+
+13. Reflection 
+    Reflection is the computer program's capacity of observing or modifying its own 
+    structure or behavior.
+
+14. final
+    it can be used for class, method and variables. A final class cannot be subclassed and it 
+    prevents other programmers from subclassing a secure class to invoke insecure methods. 
+    A final method can’t be overridden. A final variable can’t change from its initialized value.
+
+15. finalize()
+    finalize() method is used just before an object is destroyed and can be called just prior 
+    to garbage collection.
+
+16. finally
+    finally, a key word used in exception handling, creates a block of code that will be executed
+     after a try/catch block has completed and before the code following the try/catch block. 
+     The finally block will execute whether or not an exception is thrown.
+
+17. How would you write the code to reverse a linked list?
+    Node ptr = root;
+    Node temp = null;
+    Node prev = null;
+    while (ptr != null) {
+    temp = ptr.next;
+    ptr.next = prev;
+    prev = ptr;
+    ptr = temp;
+    }
+    ptr = prev;
+
+18. What complexity (big O notation) is reversing a linked list?
+    O(n)
+
+19. How would you write the code find the subsequence with the  maximum sum of n integers?
+    int curSum = 0;
+    int totalSum = 0;
+    for (int i=0; i totalSum) {
+        totalSum = curSum;
+    }
+    return totalSum;
+
+20. Find all the pairs in array that add up to a certain number?
+    h = new HashMap();
+    for (int i=0; i &lt; a.length; ++i) {
+        h.put(a[i], i);
+    }
+    for (int i=0; i &lt; h.keys.length; ++i) {
+        int match = sum - h.keys[i];
+        if (h.get(match) != null) {
+            print h.keys[i] + "," + h.keys[match];
+        }
+    }
+
+https://career.guru99.com/top-50-oops-interview-questions/

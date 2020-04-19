@@ -1,0 +1,177 @@
+1.Where do you see yourself in 5 years?
+    -Well, I am really excited by this position at Slalom because in five years, 
+    I'd like to be seen as someone with deep expertise in the energy sector,
+    and I know that's something that I'll have an opportunity to do here. I',
+    also really excited to take on more managerial responsibilities in the next
+    few years and potentially even take the lead on some projects. I've been lucky 
+    enough to work with some amazing managers, and so developing into a great manager 
+    myself is something I'm really excited about. In order to do that, I need to start
+    from the base and stack up my skills and become someone who has enough skills to
+    give proper advices to whoever needs help. 
+
+2. Why should we hire you?
+    -I think that my passion for technology and my ability to maintain websites, in
+    particular, would be a great fit for this position. Actually, in my last job was
+    responsibile for re-creating and designing employee use only website, and I learned
+    how to code in Python and its library in my spare time, so I was able to revamp that 
+    webpage and I got positive feedback from my department head. I think that my passion 
+    for technology and my coding skills would really be a great fit for this role.
+
+3. What are your strengths and weaknesses
+    -This could be my weakness but strengths at the same time. It is that my coding speed 
+    is not super fast. When I code, I try to make sure if even small updates are working,
+    so that I sometimes unnecessarily do many debuggings. But I do think that the first 
+    priority is if the program is functional, if it does the job fine. I think my self as
+    not fast but meticulous person who can get the job done.  
+
+4. What do you know about the company
+    -Slalom is a company that can create customer love by providing the data in real time. 
+    Those insights are what's really driving to change and acceleartion of the business.
+
+5. What is your proud or accomplishment
+    -I will say I had many opportunities to grow my leadership.
+
+
+When I started sophomore year, I came to see that many of my peers, along with myself,
+preferred off-campus housing. But as with such things, many students struggled to find a
+harmonious balance with their roommates and quarrels often became a negative impact. Wanting
+to find a unique solution to a common problem, I decided to create a mobile application that
+could manage the financial aspects and communication among roommates. Realizing that I could
+not easily do this venture by myself, I participated in a program called KITS (Korean
+Information Technology Society) and created a team. Since I was in a primary role as the UX/UI
+Designer and in a secondary role as Project Manager, I was able to learn valuable lessons about
+the significance of leadership and proper decision-making. As a Project Manager, I played a
+leadership role and proactively explored the team members’ various strengths and weaknesses to
+efficiently and effectively distribute tasks. At the core center of all this was communication. I
+strongly believe that our team was successful because we were able to establish a positive vibe
+and perspective by respecting the obligations and accomplishments of each other. I learned that
+as a leader, I would have to maintain a proper balance of encouragement and constructive
+criticism in the face of any obstacles that we faced. Responsibility was the most thrilling part to
+me throughout the project. I had to be prepared to quickly respond to unexpected problems and
+manage others’ work responsibilities. But I made sure to often ask help from mentors to learn
+how to efficiently lead the group and produce the best results for everyone involved. This
+
+experience of collaboration was refreshingly new and the values of leadership and innovation
+that I carried throughout established a strong foundation for my future projects and work.
+
+Technical Questions
+
+1. Find duplicates in two arrays and show them in the output.  
+    - Sorting and binary search
+    - Linear search
+    - Hashmap
+    - Hashset
+    - Convert to the list and search using lambda
+2. Modeling the database. I was given a case with building an app for school and asked to model the 
+   tables with all mappings and keys.  
+
+3. Web Architecture
+    REST API
+        -Representatinoal State Transfer
+        1. Client/Server
+            -we make api request in the browser 
+            -Make a request from client to the server 
+            -Get response of data (in JSON) back using http protocal
+            -JSON : Javascript Object Notation
+                - {
+                    "id": "1022",
+                    "name": "Allen",
+                    "likes": 10123
+                }
+                -Fields: id, name, likes
+            -Steps
+                1. Type example.com on the browser
+                    -Client doesn't know Server's actual IP Address
+                    -ISP :Internet Service Provider (charter) will do DNS lookup
+                        -Find what IP address example.com has configured
+                2. Client sends request to that ip address  
+                3. Server gives a response back to the client
+                    -Client knows what server is giving the client by the content-type 
+                    -Ex: if server responded back with the html file, content-type : text/html
+                         client will treat it as html file and parse it.
+                        -From parsed html, check all the "asset" for css, javascript then request for those files
+                        -Having one large concatenated file will do so much faster job than many asset files.
+            Server  
+                -Apache (Web Server)
+                     -Port 80 is default
+                     -able to handle multiple websites
+                -LAMP is widely used for anything upto enterprised
+                    -Linux running
+                    -Apache for the server
+                    -MySQL for the database
+                    -PHP for the backend language
+                -https://www.youtube.com/watch?v=FTAPjr7vgxE
+               
+        2. Uniformed Interface
+        3. Layered System
+        4. Cache
+        5. Stateless
+        6. Code-on-demand
+    Building in REST
+        -Just by looking at the URL, it allows to get the sense of what action it's trying to do
+    Example
+        -GET : read
+        -POST : create
+        -PUT : edit
+        -DELETE : delete
+   
+
+
+
+
+
+Class vs Object
+    -Object is an instance of a class. Object holds multiple information.
+    -Class don't have information, it can have subclass and an object can't have sub object;
+Data Structure
+    -A way of organizing and storing related data points
+
+Abstract Data types(ADT)
+    -ADT is a type (or class) for objects whose behavior is defined by a set of value and a set of operations.
+    -특정 자료형과 그 자료형을 바탕으로 하는 기능들(함수들)의 집합
+    -Ex: Linked list has insert, delete
+    -Ex: Stack has push, pop. peek, empty
+
+Interfaces
+    -A list of methods that a class promises to implement.
+    -Is not a class
+    -Only contains abstract methods cannot be instantiated.
+    -A class can inherit multiple interfaces
+    -Variables declared in a Java interface is by default final
+    -The method is empty (cannot have implementation), and it has to be defined in order to be used.
+    -Ex: 
+        public interface Shape {
+            public double area();
+            public double perimeter();
+        }
+        class Retangle implements Shape{
+            public void area(){
+                System.out.println("Area : " + ___);
+            }
+            public static void main(String args[]){
+                Shape rec = new Rectangle();
+                rec.area();
+            }
+        }
+
+Abstract Class
+    -It does not mean anything by itself but is a super class which is a basic class of
+    new classes that has certain conditions.
+    -Abstract class can have instance methods that implements a default behavior.
+    -Have to include abstract before class 
+
+When to use Interface and Abstrac Class
+    -Use an abstract class when a template needs to be defined for a group of subclasses
+    -Use an interface when a role needs to be defined for other classes, regardless of the inheritance tree of these classes
+
+Collection
+    -A Collection is a group of individual objects represented as a single unit.
+        -Ex: Standard Java provides: List, Stacks, Queues, Maps
+    -But some data structures you made from scratch
+        -Ex: LinkedList is a collection of ListNode
+        -Ex: BinarySearchTree is a collection of SearchTreeNodes
+
+Why is OOP important
+    -Object-oriented programming, abstraction is a process of hiding the implementation 
+    details from the user, only the functionality will be provided to the user. In other 
+    words, the user will have the information on what the object does instead of how it does it.
